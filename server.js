@@ -16,6 +16,12 @@ app.use(cors({
   credentials:true
 }))
 
+//Vercel 
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully ✅");
+});
+
+//end
 //userRouter
 app.use('/backend/user', userRouter)
 /*Tells the app to use all the routes from userRouter,
